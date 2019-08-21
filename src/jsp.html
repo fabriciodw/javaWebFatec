@@ -33,7 +33,7 @@
             <hr>
         </nav>
     </div>
-</div>
+
 
 
 <div>
@@ -83,66 +83,65 @@
             </select>
         </div>
 
-        <p>
-            <label for="telefone">
-                Telefone:
-            </label>
-            <input type="tel" name="txtTelefone" id="telefone" size="15">
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input class="form-control" type="tel" name="txtTelefone" id="telefone">
+        </div>
 
-            <label for="email">
-                E-Mail:
-            </label>
-            <input type="email" name="txtEmail" id="email" size="40">
+        <div class="form-group">
+            <label for="email">E-Mail:</label>
+            <input class="form-control" type="email" name="txtEmail" id="email">
+        </div>
 
-            <label for="url">
-                Lattes:
-            </label>
-            <input type="url" name="txtUrl" id="url" size="40">
-        </p>
-        <p>
-            <label for="dataNasc">
-                Data de Nascimento:
-            </label>
-            <input type="date" name="txtDataNasc" id="dataNasc">
-            <input type="file" name="txtImagem" id="imagem">
-        </p>
-        <p>
+        <div class="form-group">
+            <label for="url">Lattes:</label>
+            <input class="form-control" type="url" name="txtUrl" id="url">
+        </div>
+
+        <div class="form-group">
+            <label for="dataNasc">Data de Nascimento:</label>
+            <input class="form-control" type="date" name="txtDataNasc" id="dataNasc">
+        </div>
+
+        <div>
+            <input class="form-control-file" type="file" name="txtImagem" id="imagem">
+        </div>
+
         <fieldset style="width:200px; height:150px;"> <!-- Colocando a caixa com tamanho em CSS-->
-            <legend>
-                Estado Civil:
-            </legend>
-                <p>
-                    <input type="radio" name="estadoCivil" id="casado" value="casado">Casado
-                </p>
-                <p>
-                    <input type="radio" name="estadoCivil" id="solteiro" value="solteiro">Solteiro
-                </p>
-                <p>
-                    <input type="radio" name="estadoCivil" id="divorciado" value="casado">Divorciado
-                </p>
-        </fieldset>
-        </p>
-        <p>
-            <fieldset style="width:200px; height:150px;"> <!-- Colocando a caixa com tamanho em CSS-->
-                <legend>
-                    Disciplinas Cursadas:
-                </legend>
-        <p>
-            <input type="checkbox" name="LP" id="lp" value="lp">Logica de Programação
-        </p>
-        <p>
-            <input type="checkbox" name="ed" id="ed" value="ed">Estrutura de Dados
-        </p>
-        <p>
-            <input type="checkbox" name="Pw" id="pw" value="pw">Programação WEB
-        </p>
+            <legend> Estado Civil:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estadoCivil" id="casado" value="casado">Casado
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estadoCivil" id="solteiro" value="solteiro">Solteiro
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estadoCivil" id="divorciado" value="casado">Divorciado
+                </div>
         </fieldset>
 
-        </p>
+            <fieldset style="width:200px; height:150px;"> <!-- Colocando a caixa com tamanho em CSS-->
+                <legend>Disciplinas Cursadas:</legend>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="LP" id="lp" value="lp">Logica de Programação
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="ed" id="ed" value="ed">Estrutura de Dados
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="Pw" id="pw" value="pw">Programação WEB
+        </div>
+        </fieldset>
+
+
         <p>
-            <input type="submit" value="ENVIAR">
-            <input type="reset" value="LIMPAR">
-            <input type="button" value="VALIDAR" name="btnLimpar" onclick="validar();">
+            <input class="btn-success" type="submit" value="ENVIAR">
+            <input class="btn-secondary" type="reset" value="LIMPAR">
+            <input class="btn-danger" type="button" value="VALIDAR" name="btnLimpar" onclick="validar();">
         </p>
     </form>
 
@@ -157,6 +156,6 @@
 
     </footer>
 </div>
-
+</div>
 </body>
 </html>
