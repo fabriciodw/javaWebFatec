@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 1</title>
+    <script type="text/javascript"> <!-- Validar o campo nome se não está vazio-->
+        function validar(){
+            var n= document.formulario.txtNome.value;
+            if(n==""){
+                alert("Campo Obrigatorio. Digite o Nome")
+                document.formulario.txtNome.focus();
+            }
+        }
+
+
+    </script>
+
+    <link rel="stylesheet" href="css/estilo.css"> <!-- chamada do css -->
+    <link rel="stylesheet" href="css/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container">
+    <div>
+        <nav class="navbar navbar-dark bg-dark"> <!-- Olhar documentação em https://getbootstrap.com.br/docs/4.1/components/navbar/ -->
+            <hr> <!-- linha horizontal -->
+            <a class="navbar-brand" href="index.html">Principal</a> <!-- href = link -->
+            <a class="navbar-brand" href="banco.html">Banco de dados</a>
+            <a class="navbar-brand" href="javaEE.html">O que é Java EE?</a>
+            <a class="navbar-brand" href="servlets.html">Servlets</a>
+            <a class="navbar-brand" href="jsp.html">Java Server Pages</a>
+            <a class="navbar-brand" href="taglibs.html">Taglibs</a>
+            <hr>
+        </nav>
+    </div>
+</div>
+
+
+<div>
+    <h1 class="jumbotron text-center">Cadastro de alunos</h1>
+    <form name="formulario" action="#" method="post"> <!-- metodo do banco - post e incapsulada-->
+        <!-- montando formulario-->
+        <div class="form-group">
+        <label for="nome">Nome do Aluno:</label>
+            <input class="form-control" type="text" name="txtNome" id="nome"  maxlength="50" aria-labelledby="emailHelp" placeholder="Seu e-mail">
+            <small id="emailHelp" class="form-text text-muted">Nunca vamos perder seu e-mail</small>
+        </div>
+
+        <div class="form-goup">
+        <label for="senha">Senha:</label>
+        <input  class="form-control" type="password" name="txtSenha" id="senha"  required maxlength="10" placeholder="máx. 10 caracteres">
+        </div>
+
+        <div class="form-group">
+            <label for="endereco">Endereço do Aluno:</label>
+            <input class="form-control" type="text" name="txtEndereco" id="endereco"  maxlength="60">
+        </div>
+
+        <div class="form-group">
+            <label for="bairro">Bairro:</label>
+            <input class="form-control" type="text" name="txtBairro" id="bairro"  maxlength="20">
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">Cidade:</label>
+            <input class="form-control" type="text" name="txtCidade" id="cidade" size="30" maxlength="30">
+        </div>
+
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select class="form-control" name="cboEstado" id="estado">
+                <option value="SP">SP</option>
+                <option value="SP">RJ</option>
+                <option value="SP">BA</option>
+                <option value="SP">MG</option>
+                <option value="SP">PI</option>
+                <option value="SP">CE</option>
+                <option value="SP">MT</option>
+                <option value="SP">MS</option>
+                <option value="SP">DF</option>
+                <option value="SP">GO</option>
+                <option value="SP">ES</option>
+            </select>
+        </div>
+
+        <p>
+            <label for="telefone">
+                Telefone:
+            </label>
+            <input type="tel" name="txtTelefone" id="telefone" size="15">
+
+            <label for="email">
+                E-Mail:
+            </label>
+            <input type="email" name="txtEmail" id="email" size="40">
+
+            <label for="url">
+                Lattes:
+            </label>
+            <input type="url" name="txtUrl" id="url" size="40">
+        </p>
+        <p>
+            <label for="dataNasc">
+                Data de Nascimento:
+            </label>
+            <input type="date" name="txtDataNasc" id="dataNasc">
+            <input type="file" name="txtImagem" id="imagem">
+        </p>
+        <p>
+        <fieldset style="width:200px; height:150px;"> <!-- Colocando a caixa com tamanho em CSS-->
+            <legend>
+                Estado Civil:
+            </legend>
+                <p>
+                    <input type="radio" name="estadoCivil" id="casado" value="casado">Casado
+                </p>
+                <p>
+                    <input type="radio" name="estadoCivil" id="solteiro" value="solteiro">Solteiro
+                </p>
+                <p>
+                    <input type="radio" name="estadoCivil" id="divorciado" value="casado">Divorciado
+                </p>
+        </fieldset>
+        </p>
+        <p>
+            <fieldset style="width:200px; height:150px;"> <!-- Colocando a caixa com tamanho em CSS-->
+                <legend>
+                    Disciplinas Cursadas:
+                </legend>
+        <p>
+            <input type="checkbox" name="LP" id="lp" value="lp">Logica de Programação
+        </p>
+        <p>
+            <input type="checkbox" name="ed" id="ed" value="ed">Estrutura de Dados
+        </p>
+        <p>
+            <input type="checkbox" name="Pw" id="pw" value="pw">Programação WEB
+        </p>
+        </fieldset>
+
+        </p>
+        <p>
+            <input type="submit" value="ENVIAR">
+            <input type="reset" value="LIMPAR">
+            <input type="button" value="VALIDAR" name="btnLimpar" onclick="validar();">
+        </p>
+    </form>
+
+</div>
+
+<div>
+    <footer>
+        <p title="Passei o mause aqui">
+            copyrigth 2017 Faculdade de tecnologia de Mogi Mirim - Arthur de Azevedo -
+            <a href="https://www.fatec.edu.br/" target="_blank">https://www.fatec.edu.br/</a> <!-- _blank abre em uma nova janela -->
+        </p>
+
+    </footer>
+</div>
+
+</body>
+</html>
